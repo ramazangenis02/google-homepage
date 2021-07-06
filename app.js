@@ -3,6 +3,7 @@ const modal = document.querySelector(".app-modal");
 const modalLinks = document.querySelectorAll(".modal-links");
 appIcon.addEventListener("click", e => {
   e.preventDefault();
+  e.stopImmediatePropagation();
   let aria = appIcon.getAttribute("aria-expanded");
   modal.classList.toggle("active-modal");
 
