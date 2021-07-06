@@ -1,0 +1,457 @@
+/* Global Styles */
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: #000;
+  font-family: Arial, Helvetica, sans-serif;
+  height: 100%;
+}
+
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+/* Header && Navbar Styles */
+.navbar-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 1.5rem;
+}
+
+.header-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.navbar-links-container {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-links-container li {
+  padding: 10px;
+}
+.navbar-links-container li > a {
+  opacity: 0.75;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+}
+.navbar-links-container li > a:hover {
+  text-decoration: underline;
+}
+.signin-button {
+  background: #3c78dc;
+  color: #fff;
+  opacity: 1 !important;
+  border: 1px solid #4285f4;
+  display: inline-block;
+  padding: 9px 23px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  line-height: 16px;
+  letter-spacing: 0.25px;
+  font-size: 15px !important;
+  font-weight: 500;
+  text-align: center;
+  vertical-align: middle;
+}
+.signin-button:hover {
+  text-decoration: none !important;
+  background: #0c7ae4 !important;
+  -webkit-box-shadow: 0 1px 0 rgb(0 0 0 / 15%);
+  box-shadow: 0 1px 0 rgb(0 0 0 / 15%);
+}
+.signin-button:active {
+  background: linear-gradient(to top, #4387fd, #4683ea);
+}
+
+.app-icon {
+  color: #5f6368;
+  padding: 8px;
+  display: inline-block;
+  outline: none;
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  height: 40px !important;
+  width: 40px !important;
+}
+
+.app-icon:hover {
+  background: #e4e4e4;
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+}
+
+.app-icon[aria-expanded="true"],
+.app-icon:hover[aria-expanded="true"] {
+  background-color: rgba(95, 99, 104, 0.24);
+  border-radius: 50px;
+}
+
+/* Main Content Styles */
+.content-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 67vh;
+}
+
+.searchbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 582px;
+  height: 44px;
+  padding: 1rem;
+  padding-right: 1.5rem;
+  border: 0.1px solid #dfe1e5;
+  border-radius: 30px;
+  margin-top: 34px;
+}
+.searchbar:hover,
+.searchbar:focus-within {
+  border-color: white;
+  box-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.28);
+}
+
+.search-icon {
+  margin-right: 1rem;
+  color: #9aa0a6;
+  font-size: 20px !important;
+  cursor: default;
+}
+
+.search-input {
+  width: 90%;
+  font-size: 1rem;
+  border: none;
+  outline: none;
+}
+
+.microphone-icon {
+  background: url("//web.archive.org/web/20191130234759im_/https://www.gstatic.com/images/branding/googlemic/2x/googlemic_color_24dp.png")
+    0 0 no-repeat;
+  height: 24px;
+  width: 24px;
+  background-size: 24px;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.search-buttons {
+  display: flex;
+  align-items: center;
+}
+
+.search-buttons button {
+  background-color: #f8f9fa;
+  border: none;
+  line-height: 27px;
+  padding: 0 16px;
+  font-size: 14px;
+  color: #3c4043;
+  border-radius: 4px;
+  border: 1px solid #f8f9fa;
+  height: 36px;
+  min-width: 54px;
+  text-align: center;
+  cursor: pointer;
+  margin: 30px 6px 0 6px;
+}
+
+.search-buttons button:hover {
+  border: 1px solid #ccc;
+}
+
+.search-buttons button:active {
+  border: 1px solid #4285f4;
+}
+
+/* Footer Styles */
+.footer-container {
+  background: #f2f2f2;
+  width: 100%;
+  line-height: 25px;
+  border-top: 1px solid #e4e4e4;
+  position: absolute;
+  bottom: 0;
+}
+
+.footer-links-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1.5rem;
+}
+.footer-links li {
+  float: left;
+  padding: 10px;
+}
+
+.footer-links li a {
+  color: #5f6368;
+  font-size: 11pt;
+  display: inline-block;
+}
+
+.footer-links li a:hover {
+  text-decoration: underline;
+}
+/* Modal Styles */
+.app-modal-container {
+  padding: 0 1.5rem;
+}
+
+.app-modal {
+  width: 320px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 2px 0px rgb(60 64 67 / 30%),
+    0px 2px 6px 2px rgb(60 64 67 / 15%);
+  height: 48vh;
+  overflow-x: hidden;
+  border-radius: 10px;
+  display: none;
+  position: absolute;
+  right: 30px;
+  background: #fff;
+}
+
+.active-modal {
+  display: block !important;
+}
+
+.app-modal::-webkit-scrollbar {
+  width: 16px;
+}
+
+.app-modal::-webkit-scrollbar-thumb {
+  background: #dadce0;
+  background-clip: padding-box;
+  border: 4px solid transparent;
+  border-radius: 8px;
+  box-shadow: none;
+  min-height: 50px;
+}
+
+.app-modal::-webkit-scrollbar-track {
+  background: none;
+  border: none;
+}
+
+.modal-links-container {
+  padding: 0 0 0 20px;
+  margin-top: 10px;
+}
+
+.modal-links-container a {
+  display: inline-block;
+  text-align: center;
+  width: 90px;
+}
+.modal-links {
+  margin-top: 10px;
+  display: inline-block;
+  padding-bottom: 5px;
+  cursor: pointer;
+  transition: transform 0.2s cubic-bezier(0.333, 0, 0, 0.1);
+  vertical-align: top;
+}
+
+.logo-text {
+  display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 82px;
+  color: #202124;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.09px;
+}
+
+.modal-links:hover {
+  background: #e8f0fe;
+  border-radius: 8px;
+}
+
+.app-logos {
+  background-image: url("https://ssl.gstatic.com/gb/images/p1_c9bc74a1.png");
+  background-size: 64px 3100px;
+  height: 64px;
+  width: 64px;
+  display: inline-block;
+  vertical-align: top;
+  height: 62px;
+  transform: scale(calc(5 / 6));
+}
+
+.modal-brace {
+  border-bottom: 1px solid #e8eaed;
+  width: 100%;
+  display: block;
+  left: 0;
+  position: absolute;
+}
+
+.brace-container {
+  margin-top: 6px;
+  margin-bottom: 6px;
+}
+
+.more-button-container {
+  display: flex;
+  justify-content: center;
+}
+.more-button {
+  background-color: #fff;
+  border: 1px solid #dadce0;
+  border-radius: 4px;
+  color: #1a73e8;
+  display: inline-block;
+  margin: 16px 0 20px 0;
+  max-width: 265px;
+  outline: 0;
+  padding: 10px 24px;
+  text-align: center;
+  text-decoration: none;
+  white-space: normal;
+  width: auto;
+  font: 500 14px/16px "Google Sans", Roboto, RobotoDraft, Helvetica, Arial,
+    sans-serif;
+}
+
+.more-button:hover {
+  background-color: #f8fbff;
+  border-color: #cce0fc;
+}
+
+.more-button:active,
+.more-button:active:focus {
+  background-color: #ecf9fe;
+  border-color: transparent;
+  box-shadow: 0px 1px 2px 0px rgb(60 64 67 / 30%),
+    0px 2px 6px 2px rgb(60 64 67 / 15%);
+}
+
+#account-logo {
+  background-position: 0 -1587px;
+}
+#search-logo {
+  background-position: 0 -1794px;
+}
+#maps-logo {
+  background-position: 0 -483px;
+}
+#youtube-logo {
+  background-position: 0 -2622px;
+}
+#play-logo {
+  background-position: 0 -207px;
+}
+#news-logo {
+  background-position: 0 -1311px;
+}
+#gmail-logo {
+  background-position: 0 -2001px;
+}
+#meet-logo {
+  background-position: 0 -690px;
+}
+#chat-logo {
+  background-position: 0 -1656px;
+}
+#contacts-logo {
+  background-position: 0 -2898px;
+}
+#drive-logo {
+  background-position: 0 -2967px;
+}
+#calendar-logo {
+  background-position: 0 -2553px;
+}
+#translate-logo {
+  background-position: 0 -1932px;
+}
+#photos-logo {
+  background-position: 0 -2829px;
+}
+#duo-logo {
+  background-position: 0 -2483px;
+}
+#docs-logo {
+  background-position: 0 -1242px;
+}
+#sheets-logo {
+  background-position: 0 -2208px;
+}
+#slides-logo {
+  background-position: 0 -2277px;
+}
+#books-logo {
+  background-position: 0 -2760px;
+}
+#blogger-logo {
+  background-position: 0 -1863px;
+}
+#hangouts-logo {
+  background-position: 0 -2415px;
+}
+#keep-logo {
+  background-position: 0 -276px;
+}
+#jamboard-logo {
+  background-position: 0 -2070px;
+}
+#earth-logo {
+  background-position: 0 -1380px;
+}
+#collections-logo {
+  background-position: 0 -621px;
+}
+#arts_and_culture-logo {
+  background-position: 0 -1518px;
+}
+#google_ads-logo {
+  background-position: 0 -414px;
+}
+#podcasts-logo {
+  background-position: 0 -552px;
+}
+#travel-logo {
+  background-position: 0 -3036px;
+}
+#forms-logo {
+  background-position: 0 -2139px;
+}
+/* Media Queries */
+@media screen and (max-width: 630px) {
+  .searchbar {
+    width: 90%;
+  }
+
+  .footer-links-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media screen and (max-height: 500px) {
+  .footer-container {
+    position: relative;
+  }
+  .content-container {
+    height: 340px;
+  }
+}
